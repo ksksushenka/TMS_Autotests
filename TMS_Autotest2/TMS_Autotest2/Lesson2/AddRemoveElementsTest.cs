@@ -30,12 +30,7 @@ namespace TMS_Autotest2.Lesson2
 
             var elements = Chrome.FindElements(By.XPath("//button[text()='Delete']"));
 
-            foreach (var e in elements)
-            {
-                    count++;
-            }
-
-            Assert.That(count, Is.EqualTo(1));
+            Assert.That(elements.Count, Is.EqualTo(1));
         }
 
         [TearDown]
