@@ -29,25 +29,24 @@ namespace TMS_Autotest2.Lesson2
             IWebElement input = Chrome.FindElement(By.TagName("input"));
 
             input.SendKeys("123456789");
-            var text1 = input.Text;
-            Assert.IsNotNull(text1);
+            var text1 = input.GetAttribute("value");
+            Assert.That(text1, Is.EqualTo("123456789"));
 
             input.Clear();
             input.Click();
             input.SendKeys("asdsad");
-            var text2 = input.Text;
+            var text2 = input.GetAttribute("value");
             Assert.IsEmpty(text2);
 
             input.Clear();
             input.SendKeys(Keys.ArrowUp);
-            var text3 = input.Text;
-            Assert.IsNotNull(text3);
+            var text3 = input.GetAttribute("value");
+            Assert.That(text3, Is.EqualTo("1"));
 
             input.Clear();
             input.SendKeys(Keys.ArrowDown);
-            var text4 = input.Text;
-            Assert.IsNotNull(text4);
-
+            var text4 = input.GetAttribute("value");
+            Assert.That(text4, Is.EqualTo("-1"));
         }
 
         [TearDown]
