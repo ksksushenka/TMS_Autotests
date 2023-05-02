@@ -5,13 +5,13 @@ namespace SharelaneAutomation.Tests
     internal class LoginTest : BaseTest
     {
         LoginPage LoginPage { get; set; }
-        Get—redentials Get—redentials { get; set; }
+        GetCredentials Get—redentials { get; set; }
 
         [SetUp]
         public void Setup()
         {
             LoginPage = new LoginPage(ChromeDriver);
-            Get—redentials = new Get—redentials(ChromeDriver);
+            Get—redentials = new GetCredentials(ChromeDriver);
         }
 
         [Test]

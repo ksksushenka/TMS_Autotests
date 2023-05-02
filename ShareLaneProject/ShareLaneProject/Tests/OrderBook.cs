@@ -12,7 +12,7 @@ namespace SharelaneAutomation.Tests
     {
         ShoppingCartPage ShoppingCartPage { get; set; }
         LoginPage LoginPage { get; set; }
-        GetСredentials GetСredentials { get; set; }
+        GetCredentials GetСredentials { get; set; }
         CheckoutPage CheckoutPage { get; set; }
 
         [SetUp]
@@ -20,7 +20,7 @@ namespace SharelaneAutomation.Tests
         {
             ShoppingCartPage = new ShoppingCartPage(ChromeDriver);
             LoginPage = new LoginPage(ChromeDriver);
-            GetСredentials = new GetСredentials(ChromeDriver);
+            GetСredentials = new GetCredentials(ChromeDriver);
             CheckoutPage = new CheckoutPage(ChromeDriver);
 
             string email = GetСredentials.SetEmail();

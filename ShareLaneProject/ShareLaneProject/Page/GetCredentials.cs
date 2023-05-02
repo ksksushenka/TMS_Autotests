@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace SharelaneAutomation.Page
 {
-    internal class GetСredentials : BasePage
+    internal class GetCredentials : BasePage
     {
         By EmailLocator = By.XPath("//td[2]/b");
         By CardNumberLocator = By.CssSelector("b");
 
-        public GetСredentials(WebDriver driver) : base(driver) { }
+        public GetCredentials(WebDriver driver) : base(driver) { }
 
         void GoToUrlForGetCredsForLogin()
         {

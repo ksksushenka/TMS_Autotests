@@ -12,14 +12,14 @@ namespace SharelaneAutomation.Tests
     {
         ShoppingCartPage ShoppingCartPage { get; set; }
         LoginPage LoginPage { get; set; }
-        GetСredentials GetСredentials { get; set; }
+        GetCredentials GetСredentials { get; set; }
 
         [SetUp]
         public void Setup()
         {
             ShoppingCartPage = new ShoppingCartPage(ChromeDriver);
             LoginPage = new LoginPage(ChromeDriver);
-            GetСredentials = new GetСredentials(ChromeDriver);
+            GetСredentials = new GetCredentials(ChromeDriver);
 
             string email = GetСredentials.SetEmail();
             string password = "1111";
