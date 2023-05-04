@@ -1,3 +1,4 @@
+using SharelaneAutomation.Core;
 using SharelaneAutomation.Page;
 
 namespace SharelaneAutomation.Tests

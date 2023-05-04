@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium.Chrome;
+using SharelaneAutomation.Core;
 using SharelaneAutomation.Page;
 using System;
 using System.Collections.Generic;

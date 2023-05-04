@@ -15,7 +15,19 @@ namespace SharelaneAutomation.Tests
         [SetUp]
         public void SetUp()
         {
-            ChromeDriver = new ChromeDriver();
+            string browser = TestContext.Parameters.Get("Browser");
+
+            switch(browser)
+            {
+                case "headless":
+                    ChromeOptions options = new ChromeOptions();
+                    options.AddArgument("--headless");
+                    break;
+                default:
+                    ChromeDriver = new ChromeDriver();
+                    break;
+            }
+
             ChromeDriver.Manage().Window.Maximize();
             ChromeDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
         }

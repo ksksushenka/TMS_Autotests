@@ -1,12 +1,13 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.DevTools.V110.WebAudio;
+using SharelaneAutomation.Page;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SharelaneAutomation.Page
+namespace SharelaneAutomation.Core
 {
     internal class GetCredentials : BasePage
     {
