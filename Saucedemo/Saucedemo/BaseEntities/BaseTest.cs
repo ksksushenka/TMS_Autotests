@@ -25,8 +25,6 @@ namespace Tests.BaseEntities
         {
             Driver = new Browser().Driver;
             WaitService = new WaitService(Driver);
-            Driver.Manage().Window.Maximize();
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
 
             LoginPage = new LoginPage(Driver);
             CheckoutCompletePage = new CheckoutCompletePage(Driver);
