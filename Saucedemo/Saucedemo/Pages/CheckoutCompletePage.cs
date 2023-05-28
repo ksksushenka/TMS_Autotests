@@ -17,10 +17,12 @@ namespace Tests.Pages
 
         public CheckoutCompletePage(IWebDriver? driver, bool openPageByUrl) : base(driver, openPageByUrl)
         {
+            _logger.Info("The Checkout Complete page is opened.");
         }
 
         public CheckoutCompletePage(IWebDriver? driver) : base(driver, false)
         {
+            _logger.Info("The Checkout Complete page is opened.");
         }
 
         public override void OpenPage()

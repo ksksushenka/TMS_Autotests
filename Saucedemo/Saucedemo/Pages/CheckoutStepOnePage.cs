@@ -20,10 +20,12 @@ namespace Tests.Pages
 
         public CheckoutStepOnePage(IWebDriver? driver, bool openPageByUrl) : base(driver, openPageByUrl)
         {
+            _logger.Info("The Checkout Step One page is opened.");
         }
 
         public CheckoutStepOnePage(IWebDriver? driver) : base(driver, false)
         {
+            _logger.Info("The Checkout Step One page is opened.");
         }
 
         public override void OpenPage()

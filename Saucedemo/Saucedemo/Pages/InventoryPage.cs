@@ -18,10 +18,12 @@ namespace Tests.Pages
 
         public InventoryPage(IWebDriver? driver, bool openPageByUrl) : base(driver, openPageByUrl)
         {
+            _logger.Info("The Inventory page is opened.");
         }
 
         public InventoryPage(IWebDriver? driver) : base(driver, false)
         {
+            _logger.Info("The Inventory page is opened.");
         }
 
         public override void OpenPage()

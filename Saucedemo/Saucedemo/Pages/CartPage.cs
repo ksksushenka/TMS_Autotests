@@ -16,10 +16,12 @@ namespace Tests.Pages
 
         public CartPage(IWebDriver? driver, bool openPageByUrl) : base(driver, openPageByUrl)
         {
+            _logger.Info("The Cart page is opened.");
         }
 
         public CartPage(IWebDriver? driver) : base(driver, false)
         {
+            _logger.Info("The Cart page is opened.");
         }
 
         public override void OpenPage()
