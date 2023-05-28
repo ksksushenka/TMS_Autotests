@@ -1,4 +1,6 @@
-﻿using Core.Models;
+﻿using Allure.Commons;
+using Core.Models;
+using NUnit.Allure.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +13,16 @@ namespace Tests.Tests
 {
     public class OrderTest : BaseTest
     {
-        [Test]
+        [Test(Description = "Successful Order")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureOwner("standard_user")]
+        [AllureSuite("PassedSuite")]
+        [AllureSubSuite("GUI")]
+        [AllureIssue("TMS-23")]
+        [AllureTms("?case=1&previewMode=modal&suite=1")]
+        [AllureTag("Smoke")]
+        [AllureLink("https://www.saucedemo.com/")]
+        [Description("Сhecking a successful order through the shopping cart")]
         public void TryToOrder()
         {
             string message = "Thank you for your order!";
